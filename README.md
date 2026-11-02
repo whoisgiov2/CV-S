@@ -18,6 +18,13 @@ typst compile --root . cvs/base.typ out/base.pdf   # uno solo
 
 `--root .` es obligatorio porque los CVs importan `../lib/template.typ`.
 
+## Paquetes
+
+- [`@preview/octique:0.1.1`](https://typst.app/universe/package/octique): íconos SVG sutiles en el contacto y los títulos de sección. Va embebido en el paquete, así que no hace falta instalar fuentes.
+- Typst lo descarga solo la primera vez, así que necesita internet en esa compilación.
+- Evita paquetes de íconos que usan fuentes del sistema (`fontawesome`, `lucide`): fallan o cambian si la fuente no está instalada.
+- Para agregar un ícono: `side-block("Título", icon: "nombre")` o `cv-section("Título", icon: "nombre")`. Los nombres son los de [Octicons](https://primer.style/foundations/icons).
+
 ## Crear una variante para una vacante
 
 1. `cp cvs/base.typ cvs/<puesto>.typ`

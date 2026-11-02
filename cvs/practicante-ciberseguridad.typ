@@ -9,13 +9,13 @@
 
   // --- COLUMNA IZQUIERDA (31%) ---
   left: [
-    #side-block("Educación")[
+    #side-block("Educación", icon: "mortar-board")[
       #text(weight: "bold", fill: primary-color)[Lic. en Seguridad en TI] \
       Universidad Autónoma de Nuevo León (UANL) \
       _En Curso (Tercer Año)_
     ]
 
-    #side-block("Certificaciones")[
+    #side-block("Certificaciones", icon: "verified")[
       #list(
         [Google Cybersecurity Professional -- *Google*],
         [Red Hat System Admin I (RH124) -- *Red Hat*],
@@ -26,7 +26,7 @@
       )
     ]
 
-    #side-block("Habilidades Técnicas")[
+    #side-block("Habilidades Técnicas", icon: "terminal")[
       #list(
         [*SOC/SIEM/EDR:* Nociones de detección de alertas y análisis de riesgos.],
         [*Seguridad Perimetral:* Firewalls, túneles VPN, hardening básico.],
@@ -37,7 +37,7 @@
       )
     ]
 
-    #side-block("Idiomas")[
+    #side-block("Idiomas", icon: "globe")[
       - *Español:* Lengua Materna
       - *Inglés:* Nivel B2+ \ _(Documentación y manuales técnicos)_
     ]
@@ -45,13 +45,13 @@
 
   // --- COLUMNA DERECHA (65%) ---
   right: [
-    #cv-section("Perfil Profesional")
+    #cv-section("Perfil Profesional", icon: "person")
     #block(inset: (x: 2pt))[
       Estudiante de tercer año en Seguridad en Tecnologías de la Información (UANL), con seis certificaciones en ciberseguridad y experiencia laboral en control de accesos, gestión de cambios y trazabilidad de activos. Busco una práctica en ciberseguridad para seguir aprendiendo en un equipo de seguridad y aportar con automatización en Python y bases de redes y Linux. Disponible fines de semana, medio tiempo (hasta las 3:00 PM). Inglés B2+.
     ]
     #v(0.35em)
 
-    #cv-section("Proyectos Técnicos y Laboratorios")
+    #cv-section("Proyectos Técnicos y Laboratorios", icon: "beaker")
     #cv-item(
       "Herramienta Forense y de Auditoría de Procesos",
       subtitle: "Proyecto Académico de Seguridad Defensiva",
@@ -67,7 +67,7 @@
     ]
     #v(0.35em)
 
-    #cv-section("Experiencia Laboral")
+    #cv-section("Experiencia Laboral", icon: "briefcase")
     #cv-item(
       "Gobierno de TI",
       subtitle: "Casas Javer S.A. de C.V. -- Monterrey, N.L. | Actualidad",

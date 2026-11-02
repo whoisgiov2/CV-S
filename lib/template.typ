@@ -1,6 +1,9 @@
 // Plantilla compartida para todos los CVs.
 // Los archivos en cvs/ solo definen CONTENIDO; el diseño vive aquí.
 
+// Íconos SVG embebidos en el paquete (no requieren fuentes instaladas).
+#import "@preview/octique:0.1.1": octique-inline
+
 // --- PALETA DE COLORES CORPORATIVOS ---
 #let primary-color = rgb("#1e3a8a")
 #let secondary-color = rgb("#03358a")
@@ -8,24 +11,34 @@
 #let border-color = rgb("#e2e8f0")
 
 // --- FUNCIONES DE DISEÑO MODULARES ---
-#let cv-section(title) = {
+// Ícono pequeño opcional para títulos de sección (blanco sobre barra oscura).
+#let title-icon(name) = if name != none [
+  #octique-inline(name, color: white, width: 0.95em, baseline: 15%)#h(0.4em)
+]
+
+// Ícono para la línea de contacto.
+#let contact-icon(name) = [
+  #octique-inline(name, color: secondary-color, width: 0.95em, baseline: 15%)#h(0.2em)
+]
+
+#let cv-section(title, icon: none) = {
   block(
     fill: primary-color,
     width: 100%,
     inset: (x: 8pt, y: 4.5pt),
     radius: 3.5pt,
-    text(size: 10.5pt, weight: "bold", fill: white)[#upper(title)]
+    text(size: 10.5pt, weight: "bold", fill: white)[#title-icon(icon)#upper(title)]
   )
   v(0.18em)
 }
 
-#let side-section(title) = {
+#let side-section(title, icon: none) = {
   block(
     fill: rgb("#334155"),
     width: 100%,
     inset: (x: 7pt, y: 3.5pt),
     radius: 3pt,
-    text(size: 9.5pt, weight: "bold", fill: white)[#upper(title)]
+    text(size: 9.5pt, weight: "bold", fill: white)[#title-icon(icon)#upper(title)]
   )
   v(0.18em)
 }
@@ -49,8 +62,8 @@
 }
 
 // Bloque de la columna izquierda: título + contenido con sangría ligera.
-#let side-block(title, body) = {
-  side-section(title)
+#let side-block(title, icon: none, body) = {
+  side-section(title, icon: icon)
   block(inset: (left: 2pt), body)
   v(0.5em)
 }
@@ -63,7 +76,7 @@
   name: "CARLOS GIOVANNI REYES MEDINA",
   headline: "",
   contact: [
-    Escobedo, N.L., México | Cel: +52 667 604 9324 | WhatsApp: +52 81 8113 9867 | Email: #link("mailto:giovanni.reyesamed@gmail.com")[giovanni.reyesamed\@gmail.com]
+    #contact-icon("location")Escobedo, N.L., México | #contact-icon("device-mobile")+52 667 604 9324 | WhatsApp: +52 81 8113 9867 | #contact-icon("mail")#link("mailto:giovanni.reyesamed@gmail.com")[giovanni.reyesamed\@gmail.com]
   ],
   availability: "DISPONIBILIDAD SOLO FINES DE SEMANA : TURNO MATUTINO",
   left: [],

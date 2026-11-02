@@ -8,13 +8,13 @@
 
   // --- COLUMNA IZQUIERDA (31%) ---
   left: [
-    #side-block("Educación")[
+    #side-block("Educación", icon: "mortar-board")[
       #text(weight: "bold", fill: primary-color)[Lic. en Seguridad en TI] \
       Universidad Autónoma de Nuevo León (UANL) \
       _En Curso (Tercer Año)_
     ]
 
-    #side-block("Habilidades Técnicas")[
+    #side-block("Habilidades Técnicas", icon: "terminal")[
       #list(
         [*Gobierno y Control:* Gestión de cambios (RFC), auditoría IAM, control de activos.],
         [*Auditoría y Scripting:* Python, PowerShell, Bash.],
@@ -25,7 +25,7 @@
       )
     ]
 
-    #side-block("Certificaciones")[
+    #side-block("Certificaciones", icon: "verified")[
       #list(
         [Google Cybersecurity Professional -- *Google*],
         [Red Hat System Admin I (RH124) -- *Red Hat*],
@@ -36,7 +36,7 @@
       )
     ]
 
-    #side-block("Idiomas")[
+    #side-block("Idiomas", icon: "globe")[
       - *Español:* Lengua Materna
       - *Inglés:* Nivel B2+ \ _(Documentación y manuales técnicos)_
     ]
@@ -44,13 +44,13 @@
 
   // --- COLUMNA DERECHA (65%) ---
   right: [
-    #cv-section("Perfil Profesional")
+    #cv-section("Perfil Profesional", icon: "person")
     #block(inset: (x: 2pt))[
       Estudiante de tercer año en Seguridad en Tecnologías de la Información (UANL) con experiencia práctica en gobierno de TI, control de cambios y auditoría de accesos. Perfil enfocado en la mitigación de riesgos operacionales, cumplimiento de políticas de seguridad y trazabilidad en infraestructura corporativa. Disponibilidad de tiempo completo en turno matutino (hasta las 6:00 PM) e inglés B2+.
     ]
     #v(0.35em)
 
-    #cv-section("Experiencia Laboral")
+    #cv-section("Experiencia Laboral", icon: "briefcase")
     #cv-item(
       "Gobierno de TI",
       subtitle: "Casas Javer S.A. de C.V. -- Monterrey, N.L. | Actualidad",
@@ -68,7 +68,7 @@
     ]
     #v(0.35em)
 
-    #cv-section("Proyectos Técnicos y Laboratorios")
+    #cv-section("Proyectos Técnicos y Laboratorios", icon: "beaker")
     #cv-item(
       "Laboratorios de Infraestructura y Seguridad Perimetral",
       subtitle: "Entorno Simulado en Cisco Packet Tracer -- UANL",
